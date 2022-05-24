@@ -14,7 +14,6 @@ Person person;
     person  = new Person();
 
     }
-
     @Test
     @DisplayName("Comprobar si la edad funciona")
     public void setAge_Correcntly() {

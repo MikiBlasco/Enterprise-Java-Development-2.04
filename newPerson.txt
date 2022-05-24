@@ -1,0 +1,5 @@
+Person{id=451.0, name='Miki Blasco', age=50, occupation='no hace nada de nada'}
+Person{id=452.0, name='Piki Yas', age=50, occupation='no hace nada de nada'}
+Person{id=453.0, name='Piki Yas', age=50, occupation='no hace nada de nada'}
+Person{id=441.0, name='Miquel Blasco', age=40, occupation='no hace casi nada'}
+Person{id=442.0, name='Joe Jou', age=40, occupation='no hace casi nada'}

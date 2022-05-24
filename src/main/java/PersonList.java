@@ -9,27 +9,35 @@ import java.util.List;
 
 public class PersonList {
 
-    List<Person> persons = new ArrayList<>();
+    private ArrayList <Person> persons;
 
-    public PersonList(List<Person> persons) {
-        this.persons = persons;
+    public PersonList() {
+        persons = new ArrayList<Person>();
+    }
+
+    public void addPerson(Person person){
+        persons.add(person);
     }
 
     public Person findByName(String name) {
 
-        Person findedPerson;
+        Person findedPerson = new Person();
 
         for (Person p : persons) {
             if(p.getName().equals(name)){
                 findedPerson = p;
-                return findedPerson;
+
             }
         }
-            return new Person();
+             return findedPerson;
 
         }
 
-
-
+    @Override
+    public String toString() {
+        return "PersonList{" +
+                "persons=" + persons +
+                '}';
     }
+}
 

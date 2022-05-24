@@ -1,10 +1,3 @@
-// Create a Person class that has properties id, name, age, and occupation.
-// Throw an error if someone tries to set age to less than 0. Include all tests.
-
-//Create a clone method.
-// The clone method should take in a Person object and return a nearly identical object with new id.
-// Override the equals method in the Person class to test for equivalency excluding id.
-// Include all tests.
 
 public class Person {
 
@@ -36,11 +29,21 @@ public class Person {
     }
 
     public String getName() {
+
         return name;
     }
 
     public void setName(String name) {
-        this.name = name;
+
+        String[] nameArr = name.split(" ");
+
+        if ( nameArr.length != 2 ) {
+            System.err.println("Name must be in format 'name + surname' ");
+            throw new IllegalArgumentException();
+
+        } else {
+            this.name = name;
+        }
     }
 
     public int getAge() {
@@ -67,6 +70,8 @@ public class Person {
         return new Person(getId()+1, getName(), getAge(), getOccupation());
 
     }
+
+
 
     @Override
     public String toString() {
