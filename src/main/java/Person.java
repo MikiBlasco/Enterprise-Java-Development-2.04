@@ -13,10 +13,13 @@ public class Person {
     private int age;
     private String occupation;
 
+    private int idCounter;
+
 
     public Person() {
 
     }
+
     public Person(double id, String name, int age, String occupation) {
         setId(id);
         setName(name);
@@ -48,7 +51,7 @@ public class Person {
         if(age < 0){
             throw new IllegalArgumentException("Edad no puede ser inferior a 0");
         }else
-        this.age = age;
+          this.age = age;
     }
 
     public String getOccupation() {
@@ -57,5 +60,37 @@ public class Person {
 
     public void setOccupation(String occupation) {
         this.occupation = occupation;
+    }
+
+    @Override
+    protected Person clone() {
+        return new Person(getId()+1, getName(), getAge(), getOccupation());
+
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", occupation='" + occupation + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        Person person = (Person) obj;
+        if(
+                getName().equals(person.getName())
+                        &&
+                        getAge() == (person.getAge())
+                        &&
+                        getOccupation().equals(person.getOccupation())
+        ) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

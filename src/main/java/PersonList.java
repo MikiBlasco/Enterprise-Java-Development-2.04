@@ -15,17 +15,21 @@ public class PersonList {
         this.persons = persons;
     }
 
-    public Person findByName(String name){
+    public Person findByName(String name) {
 
-        Person findedPerson = persons.get(1);
+        Person findedPerson;
 
-        for (Person p : persons){
+        for (Person p : persons) {
             if(p.getName().equals(name)){
                 findedPerson = p;
                 return findedPerson;
             }
         }
-        return findedPerson;
+            return new Person();
+
+        }
+
+
+
     }
 
-}

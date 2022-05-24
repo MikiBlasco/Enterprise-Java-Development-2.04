@@ -9,18 +9,18 @@ public class PersonTest {
 
 Person person;
 
-@BeforeEach
+    @BeforeEach
     public void init() {
     person  = new Person();
 
-}
+    }
 
-@Test
+    @Test
     @DisplayName("Comprobar si la edad funciona")
     public void setAge_Correcntly() {
     person.setAge(10);
     assertEquals(10, person.getAge());
-}
+    }
 
     @Test
     @DisplayName("Si la edad es negativa nos devuelve una excepción")
