@@ -21,6 +21,14 @@ public class PersonList {
 
     public Person findByName(String name) {
 
+        String[] nameArr = name.split(" ");
+
+        if ( nameArr.length != 2 ) {
+            System.err.println("Name must be in format 'name + surname' ");
+            throw new IllegalArgumentException();
+
+        }
+
         Person findedPerson = new Person();
 
         for (Person p : persons) {
@@ -29,7 +37,8 @@ public class PersonList {
 
             }
         }
-             return findedPerson;
+        System.out.println("No existe esta persona y te devuelvo null");
+             return null;
 
         }
 

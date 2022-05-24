@@ -79,7 +79,7 @@ public class Main {
 
         //FINDBYNAME METHOD
 
-        System.out.println(persons.findByName("Miki Blasco"));
+        System.out.println("--------------------------------"  + persons.findByName("Miki Bl"));
 
         //CATCHING WRONG NAME EXCEPTION :
 
